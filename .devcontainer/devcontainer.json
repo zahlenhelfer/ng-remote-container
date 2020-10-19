@@ -1,6 +1,11 @@
 {
     "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-12",
-    "forwardPorts": [4200],
+    "forwardPorts": [
+        4200
+    ],
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "npm install"
+    "postCreateCommand": [
+        "npm install",
+        "npx ng serve"
+    ]
 }
